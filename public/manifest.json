@@ -1,8 +1,41 @@
 {
     "manifest_version": 3,
-    "version": "1.0.0",
     "name": "Focus Mode",
+    "version": "1.0.0",
+    "description": "Block distracting websites when you need to focus",
+    "permissions": [
+        "storage",
+        "tabs",
+        "webNavigation"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
     "action": {
-        "default_popup": "index.html"
-    }
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "moon-off16.png",
+            "48": "moon-off48.png",
+            "128": "moon-off128.png"
+        }
+    },
+    "icons": {
+        "16": "moon-off16.png",
+        "48": "moon-off48.png",
+        "128": "moon-off128.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "blocked.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
 }
