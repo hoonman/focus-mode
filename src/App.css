@@ -21,7 +21,7 @@
 .app-main {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .power-section {
@@ -43,6 +43,22 @@
 
 .status-text strong {
   color: #333;
+}
+
+.url-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 0;
 }
 
 .loading {
